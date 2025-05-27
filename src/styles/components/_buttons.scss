@@ -1,0 +1,30 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+   
+
+    &--primary {
+        color: #fff;
+        background-color: variables.$purple;
+    }
+
+    // Estilos para telas menores que 640px
+    @media (max-width: 640px) {
+        display: block;  // Faz o botão ocupar toda a largura.
+        width: 100%;      // Garantir que o botão ocupe toda a largura da tela.
+    }
+
+    // Estilos para telas entre 640px e 1024px (tablets ou laptops pequenos)
+    @media (max-width: 1024px) {
+        display: flex;           // Define como flexbox
+        justify-content: center; // Centraliza o conteúdo horizontalmente
+        align-items: center;     // Centraliza o conteúdo verticalmente
+        
+    }
+}
